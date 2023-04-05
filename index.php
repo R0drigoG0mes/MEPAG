@@ -1,5 +1,14 @@
 <?php
+
 include_once('config.php');
+include_once('registrar.php');
+include_once('entrar.php');
+
+session_start();
+
+$registrado_com_sucesso;
+$conta_inexistente;
+
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +26,7 @@ include_once('config.php');
     <title>Mepag</title>
 </head>
 <body>
+    <ouput></ouput>
     <header>
         <p class="logo">
             Mepag
@@ -89,21 +99,23 @@ include_once('config.php');
         <form action="registrar.php" method="POST" autocomplete="on">
             <legend>Registrar-se</legend>
             <fieldset>
-                <span class="btn_cancelar_registro icon-cancel-circle" id="btn_cancelar_registro"></span>
                 
                 <label for="nome_registro">Nome:</label>
-                <input type="text" name="nome" id="nome_registro" class="input_padrao">
+                <input type="text" name="nome" id="nome_registro" class="input_padrao" autocomplete="name" required placeholder="Nome" maxlength="250">
 
-                <label for="usuario_registro">Usuário:</label>
-                <input type="text" maxlength="20" name="usuario" id="usuario_registro" class="input_padrao">
+                <label for="usuario_registro">E-mail:</label>
+                <input type="text" name="email" id="usuario_registro" class="input_padrao" autocomplete="email" required placeholder="Email" maxlength="150">
 
                 <label for="senha_registro">Senha:</label>
-                <input type="password" maxlength="20" name="senha" id="senha_registro" class="input_padrao ultimo_input">
+                <input type="password" name="senha" id="senha_registro" class="input_padrao ultimo_input" autocomplete="new-password" required placeholder="Senha" minlength="8" maxlength="250">
 
                 <label for="data_nascimento">Data de nascimento:</label>
-                <input type="date" name="nascimento" id="data_nascimento">
+                <input type="date" name="nascimento" id="data_nascimento" autocomplete="bday" required>
 
-                <input class="btn_salvar_registro" id="btn_salvar_registro" type="submit" value="Salvar">
+                <input class="btn_salvar_registro" id="btn_salvar_registro" type="submit" value="Salvar" name="submit">
+
+                <span class="btn_cancelar_registro icon-cancel-circle" id="btn_cancelar_registro"></span>
+
             </fieldset>
         </form>
     </div>
@@ -113,14 +125,16 @@ include_once('config.php');
             <legend>Entrar</legend>
             <fieldset>
 
-                <label for="usuario_entrar">Usuário:</label>
-                <input type="text" maxlength="20" name="usuario_entrar" id="usuario_entrar" class="input_padrao">
+                <label for="usuario_entrar">E-mail:</label>
+                <input type="text" name="email" id="usuario_entrar" class="input_padrao" autocomplete="email" required placeholder="Email" maxlength="150">
 
                 <label for="senha_entrar">Senha:</label>
-                <input type="password" maxlength="20" name="senha_entrar" id="senha_entrar" class="input_padrao ultimo_input">
+                <input type="password" name="senha" id="senha_entrar" class="input_padrao ultimo_input" autocomplete="new-password" required placeholder="Senha" minlength="8" maxlength="250">
 
-                <input class="btn_salvar_entrar" id="btn_salvar_entrar" type="submit" value="Entrar">
-                <span class="btn_cancelar_entrar" id="btn_cancelar_entrar">Cancelar</span>
+                <input class="btn_salvar_entrar" id="btn_salvar_entrar" type="submit" value="Entrar" name="submit">
+
+                <span class="btn_cancelar_entrar icon-cancel-circle" id="btn_cancelar_entrar"></span>
+
             </fieldset>
         </form>
     </div>
