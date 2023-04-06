@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9rotsy');
-  src:  url('fonts/icomoon.eot?9rotsy#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?9rotsy') format('truetype'),
-    url('fonts/icomoon.woff?9rotsy') format('woff'),
-    url('fonts/icomoon.svg?9rotsy#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?9tdbek');
+  src:  url('fonts/icomoon.eot?9tdbek#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9tdbek') format('truetype'),
+    url('fonts/icomoon.woff?9tdbek') format('woff'),
+    url('fonts/icomoon.svg?9tdbek#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,6 +28,15 @@
 .icon-pencil:before {
   content: "\e905";
 }
+.icon-diamonds:before {
+  content: "\e919";
+}
+.icon-bullhorn:before {
+  content: "\e91a";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
 .icon-coin-dollar:before {
   content: "\e93b";
 }
@@ -39,6 +48,9 @@
 }
 .icon-clock:before {
   content: "\e94e";
+}
+.icon-bell:before {
+  content: "\e951";
 }
 .icon-floppy-disk:before {
   content: "\e962";

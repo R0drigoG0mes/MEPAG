@@ -10,11 +10,11 @@
     --Alkatra: Alkatra;
 
     /* Paleta de Cores */
-    --Verde_Escuro: #f51441;
-    --Verde_Claro: #e0846d;
+    --Vermelho: #f51441;
+    --Vermelho_Claro: #e0846d;
     --Bege: #dbc092;
-    --Vinho_Claro: #dbe7b4;
-    --Vinho: #d4f7dc;
+    --Ouro_Claro: #dbe7b4;
+    --Azul: #d4f7dc;
 }
 
 body{
@@ -25,13 +25,13 @@ body{
 
 header{
     height: 10vh;
-    background-color: var(--Verde_Escuro);
+    background-color: var(--Vermelho);
     padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 5px solid var(--Verde_Claro);
+    border-bottom: 5px solid var(--Vermelho_Claro);
     color: white;
     margin: 0px 5%;
 }
@@ -47,7 +47,13 @@ nav div{
     font-size: 3em;
     letter-spacing: .5px;
     margin: 0px;
-    text-shadow: 2px 2px 2px var(--Verde_Claro);
+    text-shadow: 2px 2px 2px var(--Vermelho_Claro);
+    display: inline-block;
+}
+
+.icon-bell{
+    font-size: 1.9em;
+    text-shadow: 2px 2px 2px var(--Vermelho_Claro);
 }
 
 /* CONTEÚDO */
@@ -83,7 +89,7 @@ main{
 }
 
 .separacao_vinho{
-    background-color: var(--Vinho);
+    background-color: var(--Azul);
     height: 5px;
     border: none;
     margin-bottom: 5%;
@@ -114,7 +120,7 @@ main{
 }
 
 .final{
-    background-color: var(--Vinho);
+    background-color: var(--Azul);
     margin: 0px 5%;
     padding: 10px 0px;
     text-align: center;
@@ -157,7 +163,7 @@ main{
 
 .icones_cobrar{
     font-size: 1.6em;
-    color: var(--Vinho);
+    color: var(--Azul);
     cursor: pointer;
 }
 
@@ -165,7 +171,7 @@ main{
     display: inline-block;
     border-right: none;
     padding: 3px;
-    border-color: var(--Vinho);
+    border-color: var(--Azul);
 }
 
 .lista_btn_nav_cobrar li input:focus{
@@ -178,9 +184,9 @@ input[type="search"]::-webkit-search-cancel-button{
 }
 
 .icon-search{
-    border-right: 2px solid var(--Vinho);
-    border-top: 2px solid var(--Vinho);
-    border-bottom: 2px solid var(--Vinho);
+    border-right: 2px solid var(--Azul);
+    border-top: 2px solid var(--Azul);
+    border-bottom: 2px solid var(--Azul);
     padding: 4px;
     background-color: white;
     transform: translateY(1px);
@@ -193,7 +199,7 @@ input[type="search"]::-webkit-search-cancel-button{
     position: fixed;
     right: 20px;
     bottom: 20px;
-    background-color: var(--Verde_Escuro);
+    background-color: var(--Vermelho);
     color: white;
     border-radius: 50%;
     font-size: 1.7em;
@@ -223,7 +229,7 @@ input[type="search"]::-webkit-search-cancel-button{
     position: absolute;
     left: 10px;
     bottom: 5px;
-    background-color: var(--Verde_Escuro);
+    background-color: var(--Vermelho);
     color: white;
     padding: 4px;
     border-radius: 7px;
@@ -234,7 +240,7 @@ input[type="search"]::-webkit-search-cancel-button{
     position: absolute;
     right: 10px;
     bottom: 5px;
-    background-color: var(--Vinho);
+    background-color: var(--Azul);
     color: white;
     padding: 4px;
     border-radius: 7px;
@@ -274,7 +280,7 @@ form{
 
 .btn_salvar_registro{
     display: inline-block;
-    background-color: var(--Verde_Escuro);
+    background-color: var(--Vermelho);
     color: white;
     padding: 4px;
     border-radius: 7px;
@@ -285,7 +291,7 @@ form{
     position: absolute;
     left: 10px;
     bottom: 5px;
-    background-color: var(--Verde_Escuro);
+    background-color: var(--Vermelho);
     color: white;
     padding: 4px;
     border-radius: 7px;
@@ -296,7 +302,7 @@ form{
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: var(--Vinho);
+    background-color: var(--Azul);
     color: white;
     padding: 4px;
     border-radius: 7px;
@@ -307,7 +313,7 @@ form{
     position: absolute;
     right: 10px;
     bottom: 5px;
-    background-color: var(--Vinho);
+    background-color: var(--Azul);
     color: white;
     padding: 4px;
     border-radius: 7px;
@@ -321,11 +327,11 @@ form{
     transform: translate(-50%, -50%);
     background-color: #ce6b5d;
     border-radius: 10px;
-    border: 2px solid var(--Vinho);
+    border: 2px solid var(--Azul);
 }
 
 .input_padrao{
-    border: 2px solid var(--Vinho);
+    border: 2px solid var(--Azul);
     padding: 4px;
     font-size: .9em;
 }
@@ -354,8 +360,8 @@ form{
 .valor_cobrança{
     margin: 0px;
     font-size: 1.4em;
-    color: var(--Verde_Escuro);
-    text-shadow: 1px 1px 1px var(--Verde_Claro);
+    color: var(--Vermelho);
+    text-shadow: 1px 1px 1px var(--Vermelho_Claro);
 }
 
 .descriçao_cobrança{
@@ -363,7 +369,7 @@ form{
 }
 
 .icon-pencil{
-    color: var(--Verde_Claro);
+    color: var(--Vermelho_Claro);
     font-size: 1.2em;
     cursor: pointer;
     position: absolute;
@@ -372,7 +378,7 @@ form{
 }
 
 .icon-bookmark{
-    color: var(--Verde_Claro);
+    color: var(--Vermelho_Claro);
     font-size: 1.2em;
     cursor: pointer;
     position: absolute;
@@ -381,7 +387,7 @@ form{
 }
 
 .icon-bin{
-    color: var(--Vinho);
+    color: var(--Azul);
     font-size: 1.2em;
     cursor: pointer;
     position: absolute;
