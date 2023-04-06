@@ -12,6 +12,7 @@ if(isset($_POST['submit']))
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $nascimento = $_POST['nascimento'];
+    $data_criacao = date('d/m/Y');
 
     $sql = "SELECT * FROM usuarios WHERE email = '$email'";
 
@@ -19,7 +20,7 @@ if(isset($_POST['submit']))
 
     if(mysqli_num_rows($verifica) !== 1){
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha,nascimento) VALUES ('$nome','$email','$senha','$nascimento')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha,nascimento,data_criacao) VALUES ('$nome','$email','$senha','$nascimento','$data_criacao')");
     
         header('Location: index.php');
     }
